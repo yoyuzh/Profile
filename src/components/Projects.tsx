@@ -1,7 +1,8 @@
 import { Section } from './ui/Section';
-import { Card } from './ui/Card';
+import { TiltCard } from './ui/TiltCard';
 import { ExternalLink, Code } from 'lucide-react';
 import { Button } from './ui/Button';
+
 
 const projects = [
   {
@@ -48,7 +49,7 @@ export const Projects = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-5xl mx-auto">
         {projects.map((project) => (
-          <Card key={project.title} glow className="flex flex-col h-full">
+          <TiltCard key={project.title} glow className="flex flex-col h-full">
             <h3 className="text-2xl font-semibold text-white mb-2">{project.title}</h3>
             <p className="text-slate-400 text-sm mb-6 flex-grow">{project.description}</p>
             
@@ -80,7 +81,7 @@ export const Projects = () => {
                 <Code size={16} /> 查看源码
               </Button>
             </div>
-          </Card>
+          </TiltCard>
         ))}
       </div>
     </Section>

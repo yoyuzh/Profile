@@ -41,11 +41,11 @@ export const Hero = () => {
 
           <motion.h1 
             variants={itemVariants}
-            className="text-5xl md:text-7xl lg:text-8xl font-semibold tracking-tight text-white mb-6 leading-[1.1]"
+            className="text-5xl md:text-7xl lg:text-8xl font-semibold tracking-tight text-white mb-6 leading-[1.1] text-glow"
           >
             构建 <br className="hidden md:block" />
-            <span className="text-gradient">稳健架构</span> 与 <br className="hidden md:block" />
-            <span className="text-gradient">极简交互</span>.
+            <span className="text-shimmer">稳健架构</span> 与 <br className="hidden md:block" />
+            <span className="text-shimmer">极简交互</span>.
           </motion.h1>
 
           <motion.p 
