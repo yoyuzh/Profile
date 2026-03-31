@@ -43,21 +43,21 @@ export const Projects = () => {
   return (
     <Section id="projects">
       <div className="text-center mb-16">
-        <h2 className="text-3xl md:text-5xl font-semibold tracking-tight text-white mb-4">精选项目</h2>
-        <p className="text-slate-400">展现后端架构设计与前端工程实现能力的核心代表作。</p>
+        <h2 className="scroll-m-20 text-3xl font-semibold tracking-tight first:mt-0 text-foreground mb-4">精选项目</h2>
+        <p className="text-lg text-muted-foreground">展现后端架构设计与前端工程实现能力的核心代表作。</p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-5xl mx-auto">
         {projects.map((project) => (
-          <TiltCard key={project.title} glow className="flex flex-col h-full">
-            <h3 className="text-2xl font-semibold text-white mb-2">{project.title}</h3>
-            <p className="text-slate-400 text-sm mb-6 flex-grow">{project.description}</p>
+          <TiltCard key={project.title} glow className="flex flex-col h-full p-6 glass-premium glass-refract glass-shine spotlight rounded-xl">
+            <h3 className="text-xl font-semibold leading-none tracking-tight mb-2">{project.title}</h3>
+            <p className="text-muted-foreground text-sm mb-6 flex-grow">{project.description}</p>
             
             <div className="mb-6">
-              <h4 className="text-xs font-semibold uppercase tracking-wider text-slate-500 mb-3">项目亮点</h4>
+              <h4 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-3">项目亮点</h4>
               <ul className="space-y-2">
                 {project.highlights.map(h => (
-                  <li key={h} className="text-sm text-slate-300 flex items-center">
+                  <li key={h} className="text-sm text-foreground flex items-center">
                     <span className="w-1.5 h-1.5 rounded-full bg-primary mr-2" />
                     {h}
                   </li>
@@ -65,9 +65,9 @@ export const Projects = () => {
               </ul>
             </div>
 
-            <div className="flex flex-wrap gap-2 mb-8">
+            <div className="flex flex-wrap gap-2 mb-8 mt-4">
               {project.tech.map(t => (
-                <span key={t} className="text-xs font-medium px-2 py-1 bg-white/5 border border-white/10 rounded-md text-white/80">
+                <span key={t} className="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80">
                   {t}
                 </span>
               ))}
